@@ -31,11 +31,11 @@ Now you can replace online ads with your own slogans to positively influence you
 [![Ads value youtube video](https://img.youtube.com/vi/Hu8LUbTmBtM/0.jpg)](https://www.youtube.com/watch?v=Hu8LUbTmBtM)
 
 
-More info a [Bettaverse](https://bettaverse.xyz/adsvalue).
+More info at [Bettaverse](https://bettaverse.xyz/adsvalue).
 
 # This Extension is based on CatBlock
 
-Thanks to the catblock team for their hard work. Ads Value is heavily based on their code.
+Thanks to the CatBlock team for their hard work. 'Ads Value' is based heavilyon their code.
 # CatBlock
 
 [![Build Status](https://travis-ci.org/CatBlock/ads value.svg?branch=master)](https://travis-ci.org/CatBlock/catblock)
