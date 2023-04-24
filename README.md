@@ -1,3 +1,33 @@
+# Ads Value
+Replace online ads with slogans personalized for you
+
+Why?
+
+Most people believe advertising doesn't work or, at least, it doesn't work on them.
+
+That is the genius of ads.
+
+If we collectively acknowledged the effectivness of advertising we would ban it immediately.
+
+Reclaim your attention
+Maybe you're sick of being influenced by faceless executives and would prefer to influence yourself?
+
+Now you can replace online ads with your own slogans to positively influence your behaviour.
+
+
+# Installation
+
+01 Download the extension from here.
+02 Click on the hambuger menu 三 in the top right Google Chrome
+03 Click Extensions
+04 Turn on Developer mode (in the top right)
+05 Click Load unpacked
+06 Select the Ads Value folder
+07 Done
+
+# This Extension is based on CatBlock
+
+Thanks to the catblock team for their hard work. Ads Value is heavily based on their code.
 # CatBlock
 
 [![Build Status](https://travis-ci.org/CatBlock/ads value.svg?branch=master)](https://travis-ci.org/CatBlock/catblock)
@@ -18,14 +48,7 @@ This project aims at maintaining and improving the original [CatBlock](http://ad
 
 AdBlock has recently switched to the Adblock Plus codebase in version 3.0, but instead of importing those changes to ads value, we think it would be better to improve the original codebase.
 
-## Installation
 
-Ads Valueis available in [Chrome Web Store](https://chrome.google.com/webstore/detail/catblock/mdcgnhlfpnbeieiiccmebgkfdebafodo),
-[Opera Extensions Store](https://addons.opera.com/sk/extensions/details/catblock/?display=en) and [Firefox Addons Store](https://addons.mozilla.org/en/firefox/addon/adblock-with-catblock/).
-
-Right now, Ads Valueis not available in the [Safari Extensions Store](https://safari-extensions.apple.com), or in the [Windows Store](https://www.microsoft.com/en-us/windows/windows-10-apps), but we are looking into releasing Ads Valuethere as well!
-
-If you can't wait for an official release of Ads Valueon Windows Store, [find out](https://github.com/CatBlock/catblock/wiki/Building-the-extension#in-microsoft-edge) how to sideload Ads Valueon Edge right now.
 
 ## Supported browsers
 
@@ -65,5 +88,3 @@ If you want to keep an eye on Ads Valueor even know more about it, check out our
 [![Discord](https://img.shields.io/discord/468064596129742850.svg)](https://discord.gg/HKCNztF)
 
 We have a public Discord server! Ask for help, help out with development and just chat about stuff! Join the community at [This link](https://discord.gg/HKCNztF)
-# adsvalue
-# adsvalue
