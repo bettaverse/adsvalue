@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title >Option</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="options.css" />
+        <link rel="stylesheet" href="ads value.css" />
+        <script src="../lib/punycode.min.js"></script>
+        <script src="../lib/jquery.min.js"></script>
+        <script src="../js/port.js"></script>
+        <script src="../js/functions.js"></script>
+        <script src="../js/checkupdates.js"></script>
+        <script src="index.js"></script>
+        <script src ="popup.js"></script>
+        <style type="text/css" media="screen">
+            body {
+                width: 50%;
+                margin: 0;
+                min-width: 150px;
+                background: #dbe2e8;
+                color:#000
+
+            
+
+            }
+    
+            html, body {
+                height: 100%;
+            }
+    
+            html {
+                display: table;
+                margin: auto;
+            }
+    
+            body {
+                display: table-cell;
+                /* horiz-align: center; */
+            }
+    
+            /* Include the padding and border in an element's total width and height */
+            * {
+                box-sizing: border-box;
+            }
+    
+            .row{
+                padding: 20px;
+            }
+            /* Remove margins and padding from the list */
+            ul {
+                margin: 0;
+                padding: 0;
+            }
+            .container-fluid{
+                text-align: center;
+            }
+    
+            /* Style the list items */
+            ul li {
+                cursor: pointer;
+                position: relative;
+                margin: 1px 1px 1px 1px;
+                padding: 12px 16px 12px 20px;
+                list-style-type: none;
+                background: #fff;
+                font-size: 17px;
+                transition: 0.2s;
+    
+    
+                /* make the list items unselectable */
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+            }
+    
+           /* !* Set all odd list items to a different color (zebra-stripes) *!
+            ul li:nth-child(odd) {
+                background: #ee3b3d;
+            }
+    */
+            /* Darker background-color on hover */
+            ul li:hover {
+                background: #007bff;
+                color:#fff;
+            }
+    
+            /* When clicked on, add a background color and strike out text */
+            ul li.checked {
+                background: #464788;
+                color: #fff;
+                text-decoration: line-through;
+            }
+    
+            /* Add a "checked" mark when clicked on */
+            ul li.checked::before {
+                content: '';
+                position: absolute;
+                border-color: #fff;
+                border-style: solid;
+                border-width: 0 2px 2px 0;
+                top: 10px;
+                left: 16px;
+                transform: rotate(45deg);
+                height: 15px;
+                width: 7px;
+            }
+    
+            /* Style the close button */
+            .close {
+                position: absolute;
+                right: 0;
+                top: 0;
+                padding: 12px 16px 12px 16px;
+            }
+    
+            .close:hover {
+                background-color: #f44336;
+                color: black;
+            }
+    
+            .close1 {
+                position: absolute;
+                right: 0;
+                top: 0;
+                padding: 12px 16px 12px 16px;
+            }
+    
+            .close1:hover {
+                background-color: #f44336;
+                color: black;
+            }
+    
+            .close2 {
+                position: absolute;
+                right: 0;
+                top: 0;
+                padding: 12px 16px 12px 16px;
+            }
+    
+            .close2:hover {
+                background-color: #f44336;
+                color: black;
+            }
+    
+            .learnClass{
+                background: #005cbf;
+            }
+            /* Style the header */
+            .header {
+                margin-top: 10px;
+                margin-bottom: 5px;
+                padding: 30px 40px;
+                color: black;
+                text-align: center;
+            }
+    
+            /* Clear floats after the header */
+            .header:after {
+                content: "";
+                display: table;
+                clear: both;
+            }
+    
+            /* Style the input */
+            input {
+                background: #eaf0ff;
+                border: none;
+                width: 75%;
+                padding: 10px;
+                float: left;
+                font-size: 20px;
+                color:"black";
+            }
+    .filters-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+            /* Style the "Add" button */
+            .addBtn {
+                padding: 10px;
+                width: 25%;
+                background: #007bff;
+                color: #f8f8f8;
+                float: left;
+                border: none;
+                text-align: center;
+                font-size: 16px;
+                cursor: pointer;
+                transition: 0.3s;
+            }
+    
+            .addBtn:hover {
+                background-color: #bbb;
+            }
+    
+            #date{
+                color:#000;
+                font-size: 20px;
+                ;
+            }
+    
+            .copyright{
+                position:relative;
+                bottom:0; left:0;
+                right: 0;
+                text-align: center;
+                margin-top: 50px;
+                color:#7d979a;
+            }
+            #btnContainer{
+            display: flex;
+            max-width: 500px;
+            align-items: center;
+            justify-content: center;
+                flex-wrap: wrap;
+                margin-top: 10px;
+                padding: 10px;
+}
+#todo-section{
+    display: flex;
+    flex-direction: column; 
+
+}
+#addTaskDiv{    display: flex;
+    flex-direction: column; align-items: center;justify-content: center;}
+    p{color: #000;}
+
+
+    #support{    display: flex;
+    flex-direction: column; align-items: center;justify-content: center;}
+    #about-container{    display: flex;
+    flex-direction: column; align-items: center;justify-content: center;}
+
+    #about{   display: flex;
+        max-width: 500px;
+    flex-direction: column; align-items: center;justify-content: center;}
+        </style>
+    </head>
+    <body>
+        <header id="header">
+            <div class="wrap">
+                <a href="https://github.com/CatBlock/catblock" class="left adblock-logo" target="_blank">
+                    <img src="../Icon.png">
+                </a>
+            </div>
+            <nav id="desktopnav">
+                <a data-scripts="options/general.js" data-page="general" i18n="tabgeneral"></a>
+                <a data-scripts="options/filters.js" data-page="filters" i18n="tabfilterlists"></a>
+                <a data-scripts="options/catblock.js" data-page="catblock">Ads Value</a>
+                <a data-scripts="filtering/domainset.js filtering/filternormalizer.js filtering/filtertypes.js filtering/filteroptions.js options/customize.js" data-page="customize" i18n="tabcustomize"></a>
+                <a data-scripts="options/support.js" data-page="support" i18n="tabsupport"></a>
+            </nav>
+            <nav id="mobilenav">
+                <button id="toggletabs"></button>
+                <div>
+                    <a data-scripts="options/general.js" data-page="general" >General</a>
+                    <a data-scripts="options/filters.js" data-page="filters" >Filters</a>
+                    <a data-scripts="options/catblock.js" data-page="catblock">Ads Value</a>
+                    <a data-scripts="filtering/domainset.js filtering/filternormalizer.js filtering/filtertypes.js filtering/filteroptions.js options/customize.js" data-page="customize" >Customize</a>
+                    <a data-scripts="options/support.js" data-page="support">Support</a>
+                </div>
+            </nav>
+        </header>
+
+        <div id="content">
+            <div id="general" class="options">
+                <div>
+                    <h2 >Options</h2>
+                    <div>                 
+                        
+                        <h3>Customize ads</h3>
+                    
+                    
+                    </div>
+
+
+
+                    <div class="row">
+                        <div class="col-8" id="todo-section">
+                     <form>
+                            <div id="addTaskDiv" class="header input-group mb-3 ">
+                                <div>      
+                                    <h2>Write your slogan.</h2>
+                                    <h4>Be concise.<br>The max length is 30 characters.</h4>
+                                </div>
+                          
+                                <input class="form-control" type="text" id="taskInput" placeholder="your advert" required maxlength="30"/>
+                          
+                                <p>Choose 1 Emoji for your ad</p>
+                                <div id ="btnContainer"></div>
+                                <input type="submit" id="addButtonTask"  class="addBtn btn btn-outline-secondary" value="Add your Ad +"/>
+                            </div>
+                    </form>
+                        <div class="container-fluid">
+                        <h2 id="date">Your Ads</h2>
+                        <p>Delete all of them to go back to defaults</p>
+                        </div>
+                        <ul id="todo-listUl" class="list-group"></ul>
+                        </div>
+                    </div>
+                    <!-- <div class="row">
+                        <div class="col-8" id="todo-section">
+                    
+                            <div id="addTaskDiv" class="header input-group mb-3">
+                                <input class="form-control" type="text" id="taskInput" placeholder=" ">
+                                <input type="submit" id="addButtonTask"  class="addBtn btn btn-outline-secondary" value="New Ad +">
+                    
+                            </div>
+                    
+                        <div class="container-fluid">
+                        <h2 id="date">Ads </h2>
+                        </div>
+                    
+                    
+                        <ul id="todo-listUl" class="list-group">
+                    
+                    </ul>
+                        </div>
+                        <!-- <div class="col-4"> -->
+                    
+                            <!-- <div id="addLearnItemDiv" class="header input-group mb-3">
+                                <input class="form-control" type="text" id="learnItemInput" placeholder=" ">
+                                <input type="submit" id="addButtonLearn"  class="addBtn btn btn-outline-secondary" value="Learn">
+                    
+                            </div> -->
+                    
+                    
+                    <!-- <div class="container-fluid">
+                        <h2 style="font-size: 22px;">To-learn checklist </h2>
+                    </div>
+                    
+                    
+                    <ul id="listUl" class="list-group">
+                    
+                    </ul> -->
+                        <!-- </div> -->
+                    </div> 
+                    
+                    </div>
+                  
+
+                    <p class="safari-only" style="display:none" id="safari_content_blocking">
+                        <input type="checkbox" class="feature" id="enable_safari_content_blocking" />
+                        <label for="enable_safari_content_blocking">Safari Content Blocking</label>
+                        <sup>
+                            [<a href="http://help.getadblock.com/support/solutions/articles/6000099239-what-is-safari-content-blocking-" target="_blank">What's this?</a>]
+                        </sup>
+                        <div id="safari_content_blocking_bmessage" class="usermessage"></div>
+                    </p>
+
+                    <p class="exclude_safari_content_blocking">
+                        <input type="checkbox" class="feature" id="enable_youtube_channel_whitelist" />
+                        <label for="enable_youtube_channel_whitelist" >Whitelist Youtube Channels</label>
+                    </p>
+
+                    <p>
+                        <input type="checkbox" class="feature" id="enable_show_context_menu_items" />
+                        <label for="enable_show_context_menu_items" i18n="showcontextmenus2"></label>
+                    </p>
+
+                    <p class="safari-only exclude_safari_content_blocking">
+                        <input type="checkbox" class="feature" id="enable_clicktoflash_compatibility_mode" />
+                        <label for="enable_clicktoflash_compatibility_mode" >Disable Youtube Streaming ads</label>
+                    </p>
+
+                    <p class="chrome-only">
+                        <input type="checkbox" class="feature" id="enable_display_stats" />
+                        <label  for="enable_display_stats" i18n="catblock_show_on_adblock_button"></label>
+                    </p>
+
+                    <p class="chrome-only">
+                        <input type="checkbox" class="feature" id="enable_display_menu_stats" />
+                        <label  for="enable_display_menu_stats" i18n="catblock_show_on_adblock_menu"></label>
+                    </p>
+
+                    <p>
+                        <input type="checkbox" class="feature" id="enable_show_advanced_options" />
+                        <label for="enable_show_advanced_options" i18n="advanced_options2"></label>
+                    </p>
+
+                    <p class="advanced chrome-only">
+                        <input type="checkbox" class="feature" id="enable_whitelist_hulu_ads" />
+                        <label for="enable_whitelist_hulu_ads" i18n="work_around_hulu_problems"></label>
+                    </p>
+
+                    <p class="forDebug advanced">
+                        <input type="checkbox" class="feature" id="enable_debug_logging" />
+                        <label for="enable_debug_logging" >Show debug statements in Console Log (which slows down CatBlock)</label>
+                    </p>
+
+                </div>
+            </div>
+            <div id="filters" class="options">
+                <div class="filters-container">
+                    
+                    <div id="message_holder" class="failed_fetch"></div>
+                    <h2 i18n="filterstabtitle"></h2>
+                    <p class="footnote padding" i18n="filterlistlink" i18n_replacement_el="footnotelink"></p>
+                    <a id="footnotelink" href="https://adblockplus.org/en/subscriptions" target="_blank"></a>
+                    <span i18n="updatenowmessage2" class="padding" i18n_replacement_el="btnUpdateNow"></span>
+                    <input type="button" id="btnUpdateNow" />
+                    <div class="padding">
+                        <div id="filter_subscriptions">
+                            <h3 i18n="adblockinglist"></h3>
+                            <div id="ad_blocking_list"></div>
+                            <div id="language_list"></div>
+                            <div id="language_dropdown_container">
+                                <span i18n="languagedropdowndescription"></span>
+                                    <select id="language_select">
+                                        <option value="" i18n="selectlanguage"></option>
+                                    </select>
+                            </div>
+                            <h3 i18n="otherfilters"></h3>
+                            <div id="other_filter_lists"></div>
+                            <h3 i18n="customfilters"></h3>
+                            <div id="custom_filter_lists"></div>
+                        </div>
+                        <div class="padding" style="margin-top:10px;">
+                            <span i18n="orenteraurl"></span>
+                            <input id="txtNewSubscriptionUrl" style="width:300px;" type="text" />
+                            <input type="button" id="btnNewSubscriptionUrl" i18n_value="subscribebutton" />
+                        </div>
+                    </div>
+
+                    <p class="advanced">
+                        <span id="btnShowLinks" i18n="showlinkstolists2"></span>
+                    </p>
+                </div>
+            </div>
+            <div id="catblock" class="options">
+                <h2 >Options</h2>
+                <p>
+                    <input type="checkbox" class="feature" id="enable_catblock"/>
+                    <label for="enable_catblock" >Advertise to Yourself</label>
+                </p>
+            
+            </div>
+            <div id="customize" class="options">
+                <div>
+                    <h2 i18n="catblock_tabcustomizetitle" class="marginh2"></h2>
+                    <div i18n="filterlistsrock" class="margin"></div>
+                    <div class="margin">
+                        <div id="divAddNewFilter">
+                            <h3 i18n="blockmoreads" class="marginh3"></h3>
+                            <div class="customizationSection">
+                                <a class="controlsLink" href="#" i18n="linkblockadbyurl"></a>
+                                <div id="divUrlBlock" class="addControls" style="display:none;">
+                                    <table class="entryTable">
+                                        <tr>
+                                            <td i18n="blockurlwithtext" colspan="2"></td>
+                                            <td i18n="blockdomain" colspan="2"></td>
+                                        </tr>
+                                        <tr></tr>
+                                        <tr>
+                                            <td>
+                                                <input id="txtBlockUrl" type="text" style="width:300px;" placeholder=".com/flashAd" />
+                                            </td>
+                                            <td class="guide">$domain=</td>
+                                            <td>
+                                                <input id="txtBlockUrlDomain" placeholder="*" type="text"/>
+                                            </td>
+                                            <td>
+                                                <input id="btnAddUrlBlock" type="button" i18n_value="buttonblockit" disabled="disabled"/>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="customizationSection">
+                                <a class="controlsLink" href="#" i18n="linkhidesection"></a>
+                                <div id="divCssBlock" class="addControls" style="display:none;">
+                                    <div i18n="blacklistclickmessage" style="margin-top:10px;"></div>
+                                    <table class="entryTable">
+                                        <tr>
+                                            <td i18n="blockdomain" colspan="2"></td>
+                                            <td i18n="csstomatch" colspan="2"></td>
+                                        </tr>
+                                        <tr></tr>
+                                        <tr>
+                                            <td>
+                                                <input id="txtUserFilterDomain" type="text" placeholder="*" style="width:200px;"/>
+                                            </td>
+                                            <td class="guide">##</td>
+                                            <td>
+                                                <input id="txtUserFilterCss" type="text" style="width:300px;"
+                             placeholder="div[class*='exampleClass'][id='someBigAd']"/>
+                                            </td>
+                                            <td>
+                                                <input id="btnAddUserFilter" type="button" i18n_value="buttonblockit" disabled="disabled"/>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <h3 i18n="stop_blocking_ads"></h3>
+                            <div class="customizationSection">
+                                <a class="controlsLink" href="#" i18n="linkunblock"></a>
+                                <div id="divExcludeBlock" class="addControls" style="display:none;">
+                                    <table class="entryTable">
+                                        <tr>
+                                            <td></td>
+                                            <td colspan="3" i18n="catblock_excludedomainorurl"></td>
+                                        </tr>
+                                        <tr></tr>
+                                        <tr>
+                                            <td class="guide">@@</td>
+                                            <td>
+                                                <input id="txtUnblock" type="text" style="width:400px;"
+                             placeholder="http://example.com" />
+                                            </td>
+                                            <td class="guide">$document</td>
+                                            <td>
+                                                <input id="btnAddExcludeFilter" type="button" i18n_value="buttonok" disabled="disabled"/>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <div class="customizationSection">
+                                <a class="controlsLink" href="#" i18n="show_ads_except_for"></a>
+                                <div id="divBlacklistBlock" class="addControls" style="display:none;">
+                                    <table class="entryTable">
+                                        <tr>
+                                            <td></td>
+                                            <td colspan="3" i18n="only_block_ads_on_these_sites"></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="guide">@@*$document,domain=</td>
+                                            <td>
+                                                <input id="txtBlacklist" type="text" style="width:400px;" />
+                                            </td>
+                                            <td>
+                                                <input id="btnAddBlacklist" type="button" i18n_value="buttonok" disabled="disabled"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td colspan="3">
+                                                <div id="messageBlacklist" class="usermessage"></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td colspan="3">
+                                                <i i18n="format_site1_site2_site3"></i>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td colspan=3>
+                                                <div class="overrules-filters footnote" i18n="warning_overrules_filters"></div>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="editFilters">
+                            <h3 style="display: inline;" i18n="manualfilteredit"></h3>
+                            <span>
+                                <input type="button" id="btnEditAdvancedFilters" i18n_value="buttonedit" />
+                                <span id="spanSaveButton" style="display:none;">
+                                    <input type="button" id="btnSaveAdvancedFilters" i18n_value="savebutton" />
+                                    <span class="savereminder" i18n="savereminder"></span>
+                                </span>
+                            </span>
+                        </div>
+
+                        <div>
+                            <div i18n="filtersavewarning" class="footnote" i18n_replacement_el="tutorlink" style="margin:5px 0 5px 3px;"></div>
+                            <a id="tutorlink" target="_blank"></a>
+                            <div id="safariwarning" class="footnote" style="margin:5px 0 5px 3px; display: none;"></div>
+                        </div>
+                        <div id="messagecustom" class="usermessage"></div>
+                        <div>
+                            <textarea id="txtFiltersAdvanced" cols="112" rows="15" disabled></textarea>
+                            <br/>
+                        </div>
+
+                        <div class="advanced">
+                            <div>
+                                <span id="btnCleanUp" i18n="cleanuplist2"></span>
+                            </div>
+                        </div>
+                        <br/>
+                        <div id="divExcludeFilters" style="display:none;">
+                            <div id="editExcludeFilters">
+                                <h3 style="display: inline;" i18n="manualexcludefilteredit"></h3>
+                                <span>
+                                    <input type="button" id="btnEditExcludeAdvancedFilters" i18n_value="buttonedit" />
+                                    <span id="spanSaveExcludeButton" style="display:none;">
+                                        <input type="button" id="btnSaveExcludeAdvancedFilters" i18n_value="savebutton" />
+                                        <span class="savereminder" i18n="savereminder"></span>
+                                    </span>
+                                </span>
+                            </div>
+
+                            <div>
+                                <textarea id="txtExcludeFiltersAdvanced" cols="112" rows="5" disabled></textarea>
+                                <br/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="support" class="options" style="padding: 20px;">
+       
+
+                <h3 >Based on the CatBlock -Check it out</h3>
+                <p >SourceCode</p>
+                <a id="codelink" href="https://github.com/CatBlock/catblock" target="_blank">Github</a>
+                <p  i18n_replacement_el="contributorslink">Contributer to the Cat Block extension this is built on</p>
+                <a id="contributorslink" href="https://github.com/CatBlock/catblock/graphs/contributors" target="_blank"></a>
+
+                <h3 >UPDATES</h3>
+                <p id="checkupdate"></p>
+
+                <p id="whatsnew">What's new</p>
+                <textarea id="changes" style="display:none;"></textarea>
+                <div id="about-container">
+                    <div id="about">
+                    <h2>About the original Catblock Extension</h2>
+                    <h3 >Please note I had nothing to do with making the CatBlock extension and I would never have been able to make ads value without the hard work of the CatBlock extension team</h3>
+                    <p>Catblock (previously known as "AdBlock with CatBlock") is like an ad blocking extension, but instead of blocking ads it shows you pictures of cats by default (configurable).</p>
+                    
+                    <p>You can also disable replacing ads by cats, so Ads Value can work as a standard ad blocking extension (useful for when you're doing presentations anywhere!)</p>
+                    
+                    <p>If you want to find out the history of this extension, you can check it out <a href="https://github.com/CatBlock/catblock/wiki/History">here</a>.</p>
+                    
+                    <h2>Goals</h2>
+                    <p>The goals of the ortiginal catblock extension</p>
+                    <p>This project aims at maintaining and improving the original <a href="http://adsvalue.getadblock.com">CatBlock</a> project by Michael Gundlach (the creator of <a href="https://getadblock.com">AdBlock</a> and CatBlock), which is built on top of the AdBlock code.</p>
+                    
+                    <p>AdBlock has recently switched to the Adblock Plus codebase in version 3.0, but instead of importing those changes to Ads Value, we think it would be better to improve the original codebase.</p>
+                    
+                  
+                 
+                    <h2>Supported browsers</h2>
+                    
+                    <p>Ads Value is compatible with following browsers:</p>
+                    
+                    <ul>
+                      <li>Chrome: 49+</li>
+                      <li>Opera: 35+</li>
+                      <li>Safari: 6+</li>
+                      <li>Firefox: 48+</li>
+                      <li>Edge: Windows 10 Anniversary - version 1607</li>
+                    </ul>
+                    
+           
+                    
+                
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <footer>
+            <div id="translation_credits">
+                <span id="translator_credit"></span>
+                <span id="translator_names"></span>
+            </div>
+            <div id="versioninfo">
+                <img class="smalllogo" src="../Icon.png" />
+                <a href="https://github.com/CatBlock/catblock/releases" target="_blank">
+                    <span id="version_number"></span>
+                </a>
+            </div>
+            <div id="madebyus">
+                <span>made by <a href="https:mattgordon.xyz">Matt Gordon</a></span>
+                <span>based on Catblock by <a href="https://github.com/CatBlock/catblock/wiki/History" target="_blank">two ex-developers of AdBlock</a> </span>
+            </div>
+
+
+        </footer>
+    </body>
+</html>
