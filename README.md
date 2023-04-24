@@ -2,7 +2,7 @@
 Replace online ads with slogans personalized for you
 ![ads value](https://www.bettaverse.xyz/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fadsvalue1.eac99e4c.jpg&w=1920&q=75)
 
-Why?
+#####Why?
 
 Most people believe advertising doesn't work or, at least, it doesn't work on them.
 
@@ -10,7 +10,8 @@ That is the genius of ads.
 
 If we collectively acknowledged the effectivness of advertising we would ban it immediately.
 
-Reclaim your attention
+#####Reclaim your attention
+
 Maybe you're sick of being influenced by faceless executives and would prefer to influence yourself?
 
 Now you can replace online ads with your own slogans to positively influence your behaviour.
@@ -25,6 +26,12 @@ Now you can replace online ads with your own slogans to positively influence you
 5. Click Load unpacked
 6. Select the Ads Value folder
 7. Done
+
+#### Watch this short vid:
+[![Ads value youtube video](https://img.youtube.com/vi/Hu8LUbTmBtM/0.jpg)](https://www.youtube.com/watch?v=Hu8LUbTmBtM)
+
+
+More info a [Bettaverse](https://bettaverse.xyz/adsvalue).
 
 # This Extension is based on CatBlock
 
