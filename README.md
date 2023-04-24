@@ -1,5 +1,6 @@
 # Ads Value
 Replace online ads with slogans personalized for you
+![ads value](https://www.bettaverse.xyz/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fadsvalue1.eac99e4c.jpg&w=1920&q=75)
 
 Why?
 
@@ -17,13 +18,13 @@ Now you can replace online ads with your own slogans to positively influence you
 
 # Installation
 
-01. Download the extension from here.
-02. Click on the hambuger menu 三 in the top right Google Chrome
-03. Click Extensions
-04. Turn on Developer mode (in the top right)
-05. Click Load unpacked
-06. Select the Ads Value folder
-07. Done
+1. Download the extension from here.
+2. Click on the hambuger menu 三 in the top right Google Chrome
+3. Click Extensions
+4. Turn on Developer mode (in the top right)
+5. Click Load unpacked
+6. Select the Ads Value folder
+7. Done
 
 # This Extension is based on CatBlock
 
