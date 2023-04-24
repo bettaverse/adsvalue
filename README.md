@@ -17,13 +17,13 @@ Now you can replace online ads with your own slogans to positively influence you
 
 # Installation
 
-01 Download the extension from here.
-02 Click on the hambuger menu 三 in the top right Google Chrome
-03 Click Extensions
-04 Turn on Developer mode (in the top right)
-05 Click Load unpacked
-06 Select the Ads Value folder
-07 Done
+01. Download the extension from here.
+02. Click on the hambuger menu 三 in the top right Google Chrome
+03. Click Extensions
+04. Turn on Developer mode (in the top right)
+05. Click Load unpacked
+06. Select the Ads Value folder
+07. Done
 
 # This Extension is based on CatBlock
 
