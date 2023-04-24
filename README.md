@@ -66,3 +66,4 @@ If you want to keep an eye on Ads Valueor even know more about it, check out our
 
 We have a public Discord server! Ask for help, help out with development and just chat about stuff! Join the community at [This link](https://discord.gg/HKCNztF)
 # adsvalue
+# adsvalue
