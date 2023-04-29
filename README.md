@@ -35,8 +35,10 @@ More info at [Bettaverse](https://bettaverse.xyz/adsvalue).
 
 # This Extension is based on CatBlock
 
-Thanks to the CatBlock team for their hard work. 'Ads Value' is based heavilyon their code.
+Thanks to the CatBlock team for their hard work. 'Ads Value' is based heavily on their code.
 Here's some info and links about that project:
+
+[Catblock](https://github.com/CatBlock/catblock) on Github
 
 # CatBlock
 
