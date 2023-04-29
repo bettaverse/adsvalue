@@ -19,7 +19,7 @@ Now you can replace online ads with your own slogans to positively influence you
 
 # Installation
 
-1. Download the extension from here.
+1. [Download](https://github.com/bettaverse/adsvalue/archive/refs/heads/main.zip) the extension from here.
 2. Click on the hambuger menu 三 in the top right Google Chrome
 3. Click Extensions
 4. Turn on Developer mode (in the top right)
